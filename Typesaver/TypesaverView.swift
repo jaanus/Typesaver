@@ -16,20 +16,15 @@ class TypesaverView: ScreenSaverView {
 
     let webView: WKWebView
     
-    override func drawRect(dirtyRect: NSRect) {
-        super.drawRect(dirtyRect)
-
-        NSColor.redColor().setFill()
-        NSRectFill(NSMakeRect(100, 100, 100, 200))
-        
-        // Drawing code here.
-    }
-    
     override func hasConfigureSheet() -> Bool {
         return false
     }
     
-    override init!(frame: NSRect, isPreview: Bool) {
+    convenience init() {
+        self.init(frame: CGRectZero, isPreview: false)
+    }
+    
+    override init(frame: NSRect, isPreview: Bool) {
         webView = WKWebView()
         super.init(frame: frame, isPreview: isPreview)
         setupWebView()
@@ -43,10 +38,19 @@ class TypesaverView: ScreenSaverView {
     
     func setupWebView() {
         
+        // layout
+        webView.translatesAutoresizingMaskIntoConstraints = false
+        self.addSubview(webView)
+        
+        let horizontalConstraints = NSLayoutConstraint.constraintsWithVisualFormat("H:|-0-[webView]-0-|", options: nil, metrics: nil, views: ["webView": webView])
+        let verticalConstraints = NSLayoutConstraint.constraintsWithVisualFormat("V:|-0-[webView]-0-|", options: nil, metrics: nil, views: ["webView": webView])
+        
+        self.addConstraints(horizontalConstraints)
+        self.addConstraints(verticalConstraints)
+        
+        // content
+        let url = NSURL(string: "http://broadcast.typesaver.net/")
+        let request = NSURLRequest(URL: url!)
+        webView.loadRequest(request)
     }
-    
-//    override func viewWillMoveToWindow(newWindow: NSWindow?) {
-//        super.viewWillMoveToWindow(newWindow)
-//    }
-    
 }
