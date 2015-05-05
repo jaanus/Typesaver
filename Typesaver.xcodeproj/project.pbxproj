@@ -13,6 +13,8 @@
 		EA66105A1AF8096F0006F910 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA6610591AF8096F0006F910 /* Images.xcassets */; };
 		EA66105D1AF8096F0006F910 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA66105B1AF8096F0006F910 /* Main.storyboard */; };
 		EA6610701AF809B50006F910 /* TypesaverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA66104B1AF8055A0006F910 /* TypesaverView.swift */; };
+		EAF2EE621AF8C9660092D309 /* thumbnail.png in Resources */ = {isa = PBXBuildFile; fileRef = EAF2EE601AF8C9660092D309 /* thumbnail.png */; };
+		EAF2EE631AF8C9660092D309 /* thumbnail@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EAF2EE611AF8C9660092D309 /* thumbnail@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +27,8 @@
 		EA6610571AF8096F0006F910 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EA6610591AF8096F0006F910 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		EA66105C1AF8096F0006F910 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EAF2EE601AF8C9660092D309 /* thumbnail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = thumbnail.png; sourceTree = "<group>"; };
+		EAF2EE611AF8C9660092D309 /* thumbnail@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "thumbnail@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +71,8 @@
 			isa = PBXGroup;
 			children = (
 				EA66104B1AF8055A0006F910 /* TypesaverView.swift */,
+				EAF2EE601AF8C9660092D309 /* thumbnail.png */,
+				EAF2EE611AF8C9660092D309 /* thumbnail@2x.png */,
 				EA6610401AF8048F0006F910 /* Supporting Files */,
 			);
 			path = Typesaver;
@@ -189,6 +195,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAF2EE621AF8C9660092D309 /* thumbnail.png in Resources */,
+				EAF2EE631AF8C9660092D309 /* thumbnail@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
