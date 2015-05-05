@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>78BC0B18-5A04-4844-8777-D6A6135B0B3E</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Typesaver</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>7EB85B5887B5D86C7B04F0B0F9CAB53C05297339</key>
+		<string>github.com:jaanus/Typesaver.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Typesaver.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>7EB85B5887B5D86C7B04F0B0F9CAB53C05297339</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:jaanus/Typesaver.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>7EB85B5887B5D86C7B04F0B0F9CAB53C05297339</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>7EB85B5887B5D86C7B04F0B0F9CAB53C05297339</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Typesaver</string>
+		</dict>
+	</array>
+</dict>
+</plist>
