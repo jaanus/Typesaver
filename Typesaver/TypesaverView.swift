@@ -12,13 +12,11 @@ import WebKit
 
 
 
-class TypesaverView: ScreenSaverView {
+class TypesaverView: ScreenSaverView, WKNavigationDelegate {
 
     let webView: WKWebView
     
-    override func hasConfigureSheet() -> Bool {
-        return false
-    }
+    // MARK: - Initializers
     
     convenience init() {
         self.init(frame: CGRectZero, isPreview: false)
@@ -36,6 +34,54 @@ class TypesaverView: ScreenSaverView {
         setupWebView()
     }
     
+
+    
+    // MARK: - ScreenSaverView
+    
+    override func hasConfigureSheet() -> Bool {
+        return false
+    }
+
+    
+    
+    
+    // MARK: - NSView overrides, responder behavior
+
+    // Idea from https://github.com/liquidx/webviewscreensaver
+    
+    override func hitTest(aPoint: NSPoint) -> NSView? {
+        return self
+    }
+    
+    override func keyDown(theEvent: NSEvent) {
+        return
+    }
+    
+    override func keyUp(theEvent: NSEvent) {
+        return
+    }
+
+    override var acceptsFirstResponder: Bool {
+        return true
+    }
+    
+    override func resignFirstResponder() -> Bool {
+        return false
+    }
+    
+    
+    
+    // MARK: - WKNavigationDelegate
+    
+    func webView(webView: WKWebView, didFinishNavigation navigation: WKNavigation!) {
+        // Don’t be first responder and capture any events, so that moving the mouse can abort the screensaver
+        webView.resignFirstResponder()
+    }
+    
+    
+    
+    // MARK: - Custom UI, behavior
+    
     func setupWebView() {
         
         // layout
@@ -49,6 +95,7 @@ class TypesaverView: ScreenSaverView {
         self.addConstraints(verticalConstraints)
         
         // content
+        webView.navigationDelegate = self
         let url = NSURL(string: "http://broadcast.typesaver.net/")
         let request = NSURLRequest(URL: url!)
         webView.loadRequest(request)
