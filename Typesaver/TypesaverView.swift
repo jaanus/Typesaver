@@ -25,13 +25,13 @@ class TypesaverView: ScreenSaverView, WKNavigationDelegate {
     override init(frame: NSRect, isPreview: Bool) {
         webView = WKWebView()
         super.init(frame: frame, isPreview: isPreview)
-        setupWebView()
+        setupWebView(isPreview: isPreview)
     }
     
     required init?(coder: NSCoder) {
         webView = WKWebView()
         super.init(coder: coder)
-        setupWebView()
+        setupWebView(isPreview: false)
     }
     
 
@@ -82,7 +82,7 @@ class TypesaverView: ScreenSaverView, WKNavigationDelegate {
     
     // MARK: - Custom UI, behavior
     
-    func setupWebView() {
+    func setupWebView(#isPreview: Bool) {
         
         // layout
         webView.translatesAutoresizingMaskIntoConstraints = false
@@ -96,8 +96,13 @@ class TypesaverView: ScreenSaverView, WKNavigationDelegate {
         
         // content
         webView.navigationDelegate = self
-        let url = NSURL(string: "http://typesaver.net/#screensaver")
-        let request = NSURLRequest(URL: url!)
+        let url: NSURL
+        if isPreview {
+            url = NSURL(string: "http://typesaver.net/#screensaverpreview")!
+        } else {
+            url = NSURL(string: "http://typesaver.net/#screensaver")!
+        }
+        let request = NSURLRequest(URL: url)
         webView.loadRequest(request)
     }
 }
