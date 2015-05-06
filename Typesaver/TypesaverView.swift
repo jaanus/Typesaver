@@ -96,7 +96,7 @@ class TypesaverView: ScreenSaverView, WKNavigationDelegate {
         
         // content
         webView.navigationDelegate = self
-        let url = NSURL(string: "http://broadcast.typesaver.net/")
+        let url = NSURL(string: "http://typesaver.net/#screensaver")
         let request = NSURLRequest(URL: url!)
         webView.loadRequest(request)
     }
