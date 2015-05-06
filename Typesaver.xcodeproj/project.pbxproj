@@ -119,9 +119,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		EA66103C1AF8048F0006F910 /* Typesaver */ = {
+		EA66103C1AF8048F0006F910 /* Type */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EA6610481AF8048F0006F910 /* Build configuration list for PBXNativeTarget "Typesaver" */;
+			buildConfigurationList = EA6610481AF8048F0006F910 /* Build configuration list for PBXNativeTarget "Type" */;
 			buildPhases = (
 				EA6610381AF8048F0006F910 /* Sources */,
 				EA6610391AF8048F0006F910 /* Frameworks */,
@@ -132,7 +132,7 @@
 			);
 			dependencies = (
 			);
-			name = Typesaver;
+			name = Type;
 			productName = Typesaver;
 			productReference = EA66103D1AF8048F0006F910 /* Typesaver.saver */;
 			productType = "com.apple.product-type.bundle";
@@ -184,7 +184,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				EA66103C1AF8048F0006F910 /* Typesaver */,
+				EA66103C1AF8048F0006F910 /* Type */,
 				EA6610501AF8096E0006F910 /* TypesaverTester */,
 			);
 		};
@@ -391,13 +391,14 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		EA6610481AF8048F0006F910 /* Build configuration list for PBXNativeTarget "Typesaver" */ = {
+		EA6610481AF8048F0006F910 /* Build configuration list for PBXNativeTarget "Type" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EA6610491AF8048F0006F910 /* Debug */,
 				EA66104A1AF8048F0006F910 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EA66106A1AF8096F0006F910 /* Build configuration list for PBXNativeTarget "TypesaverTester" */ = {
 			isa = XCConfigurationList;
@@ -406,6 +407,7 @@
 				EA66106C1AF8096F0006F910 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
