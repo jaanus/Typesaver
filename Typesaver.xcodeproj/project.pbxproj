@@ -18,7 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		EA66103D1AF8048F0006F910 /* Typesaver.saver */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Typesaver.saver; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA66103D1AF8048F0006F910 /* Type.saver */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Type.saver; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA6610411AF8048F0006F910 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EA66104B1AF8055A0006F910 /* TypesaverView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypesaverView.swift; sourceTree = "<group>"; };
 		EA6610511AF8096E0006F910 /* TypesaverTester.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TypesaverTester.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -61,7 +61,7 @@
 		EA66103E1AF8048F0006F910 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				EA66103D1AF8048F0006F910 /* Typesaver.saver */,
+				EA66103D1AF8048F0006F910 /* Type.saver */,
 				EA6610511AF8096E0006F910 /* TypesaverTester.app */,
 			);
 			name = Products;
@@ -134,7 +134,7 @@
 			);
 			name = Type;
 			productName = Typesaver;
-			productReference = EA66103D1AF8048F0006F910 /* Typesaver.saver */;
+			productReference = EA66103D1AF8048F0006F910 /* Type.saver */;
 			productType = "com.apple.product-type.bundle";
 		};
 		EA6610501AF8096E0006F910 /* TypesaverTester */ = {
