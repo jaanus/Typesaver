@@ -78,6 +78,7 @@ class TypesaverView: ScreenSaverView, WKNavigationDelegate {
     
     func webView(webView: WKWebView, didFinishNavigation navigation: WKNavigation!) {
         // Don’t be first responder and capture any events, so that moving the mouse can abort the screensaver
+        webView.hidden = false
         webView.resignFirstResponder()
     }
     
@@ -97,6 +98,7 @@ class TypesaverView: ScreenSaverView, WKNavigationDelegate {
         // layout
         webView.translatesAutoresizingMaskIntoConstraints = false
         self.addSubview(webView)
+        webView.hidden = true
         
         let horizontalConstraints = NSLayoutConstraint.constraintsWithVisualFormat("H:|-0-[webView]-0-|", options: nil, metrics: nil, views: ["webView": webView])
         let verticalConstraints = NSLayoutConstraint.constraintsWithVisualFormat("V:|-0-[webView]-0-|", options: nil, metrics: nil, views: ["webView": webView])
