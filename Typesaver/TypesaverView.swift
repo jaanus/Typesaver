@@ -15,6 +15,7 @@ import WebKit
 class TypesaverView: ScreenSaverView, WKNavigationDelegate {
 
     let webView: WKWebView
+    let defaults: ScreenSaverDefaults = ScreenSaverDefaults.defaultsForModuleWithName("net.typesaver.saver") as! ScreenSaverDefaults
     
     // MARK: - Initializers
     
@@ -25,12 +26,14 @@ class TypesaverView: ScreenSaverView, WKNavigationDelegate {
     override init(frame: NSRect, isPreview: Bool) {
         webView = WKWebView()
         super.init(frame: frame, isPreview: isPreview)
+        registerDefaults()
         setupWebView(isPreview: isPreview)
     }
     
     required init?(coder: NSCoder) {
         webView = WKWebView()
         super.init(coder: coder)
+        registerDefaults()
         setupWebView(isPreview: false)
     }
     
@@ -82,6 +85,13 @@ class TypesaverView: ScreenSaverView, WKNavigationDelegate {
     
     // MARK: - Custom UI, behavior
     
+    func registerDefaults() {
+        defaults.registerDefaults([
+            "url": "http://typesaver.net/#screensaver",
+            "previewUrl": "http://typesaver.net/#screensaverpreview"
+        ])
+    }
+    
     func setupWebView(#isPreview: Bool) {
         
         // layout
@@ -96,12 +106,15 @@ class TypesaverView: ScreenSaverView, WKNavigationDelegate {
         
         // content
         webView.navigationDelegate = self
-        let url: NSURL
+        let urlString: String
         if isPreview {
-            url = NSURL(string: "http://typesaver.net/#screensaverpreview")!
+            urlString = defaults.stringForKey("previewUrl")!
         } else {
-            url = NSURL(string: "http://typesaver.net/#screensaver")!
+            urlString = defaults.stringForKey("url")!
         }
+        
+        let url = NSURL(string: urlString)!
+        
         let request = NSURLRequest(URL: url)
         webView.loadRequest(request)
     }
